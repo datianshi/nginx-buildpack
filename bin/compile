@@ -20,6 +20,8 @@ set -e
 
 # ------------------------------------------------------------------------------------------------
 
+echo $1
+echo $2
 compile_build_dir=$1
 compile_cache_dir=$2
 compile_buildpack_dir=$(cd $(dirname $0) && cd .. && pwd)
