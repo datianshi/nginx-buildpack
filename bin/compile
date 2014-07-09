@@ -36,6 +36,7 @@ compile_buildpack_bin=$compile_buildpack_dir/bin
 # ------------------------------------------------------------------------------------------------
 
 compile_nginx_tgz="$compile_buildpack_dir/vendor/nginx-1.5.10.tar.gz"
+compile_apache_tgz="$compile_buildpack_dir/vendor/httpd-2.4.9.tar.gz"
 
 # ------------------------------------------------------------------------------------------------
 
@@ -49,6 +50,7 @@ mv * $compile_cache_dir/public
 mv $compile_cache_dir/public .
 [[ -f public/Procfile ]] && mv public/Procfile .
 tar xzf $compile_nginx_tgz
+tar xzf $compile_apache_tgz
 
 cp -f $compile_buildpack_dir/conf/nginx.conf nginx/conf/nginx.conf
 cp -f $compile_buildpack_dir/conf/mime.types nginx/conf/mime.types
